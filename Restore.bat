@@ -3,11 +3,39 @@
 ::
 
 @echo off
-setlocal
+setlocal EnableDelayedExpansion 
+
+set keyText="_WP"
+
+set val=0
+echo Searching for saved games: %saveText%
+for /d %%G in ("*%keyText%") do (
+set /a val+=1
+set dirOpt[!val!]=%%G
+)
+
+set "exitTxt=Exit"
+echo 0 %exitTxt%
+
+@For /L %%i in (1,1,%val%) do (
+    echo %%i !dirOpt[%%i]! 
+)
+
+set /a dirNbr=0
+set /p dirNbr=Enter the number for the map to restore: 
+
+if %dirNbr% EQU 0 (
+    echo You chose to not do a restore.
+    goto :EndOfScript
+)
+if %dirNbr% GTR %val% (
+  echo You chose to not do a restore.
+  goto :EndOfScript
+)
 
 set "arkLocalSavedDir=C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\SavedArksLocal"
-set "arkLastSavedSubdir=TheIsland_WP"
-set "arkSaveFile=%arkLocalSavedDir%\%arkLastSavedSubdir%\TheIsland_WP.ark"
+call set arkLastSavedSubdir=%%dirOpt[%dirNbr%]%%
+set "arkSaveFile=%arkLocalSavedDir%\%arkLastSavedSubdir%\%arkLastSavedSubdir%.ark"
 
 @echo Looking for file %arkSaveFile%
 if not exist "%arkSaveFile%" (
@@ -18,16 +46,17 @@ Exit
 
 cd "%arkLocalSavedDir%"
 
-dir "* SAVE_*"
+dir "%arkLastSavedSubdir% - SAVE_*"
 set saveText=""
-set /p saveText=Enter at least part of the name of the backup that you want to restore: 
+set /p saveText=Enter at least part of the name of the backup that you want to restore or something else to exit: 
 
 echo Searching for saves containing: %saveText%
-for /d %%G in ("*SAVE_*%saveText%*") do (
+for /d %%G in ("%arkLastSavedSubdir%*SAVE_*%saveText%*") do (
 call :DoIt %%G
 echo ----------------------------------------
 )
 
+:EndOfScript
 set /p allDone=All done (hit ENTER):
 goto End
 
