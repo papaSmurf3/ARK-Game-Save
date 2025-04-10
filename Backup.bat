@@ -8,6 +8,9 @@ set "arkLocalSavedDir=C:\Program Files (x86)\Steam\steamapps\common\ARK Survival
 set "keyText=_WP"
 set "additionalDestFile=AdditionalDestinations.txt"
 
+echo Changing to ARK save dir: %arkLocalSavedDir%
+cd "%arkLocalSavedDir%"
+
 set val=0
 echo Searching for saved games
 for /d %%G in ("*%keyText%") do (
@@ -35,7 +38,6 @@ if %dirNbr% GTR %val% (
   goto :EndOfScript
 )
 
-set "arkLocalSavedDir=C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\SavedArksLocal"
 call set arkLastSavedSubdir=%%dirOpt[%dirNbr%]%%
 set "arkSaveFile=%arkLocalSavedDir%\%arkLastSavedSubdir%\%arkLastSavedSubdir%.ark"
 
@@ -64,7 +66,6 @@ set doThis=y
 set /p doThis=Continue the backup [y/n] (default - %doThis%)?:
 
 if %doThis% EQU y (
-  cd "%arkLocalSavedDir%"
   echo Executing xcopy /s /i /v /f "%arkLastSavedSubdir%" "%newSaveDir%"
   xcopy /s /i /v "%arkLastSavedSubdir%" "%newSaveDir%"
   echo Checking to see if you have additional destination folders listed in the file: %additionalDestFile%
