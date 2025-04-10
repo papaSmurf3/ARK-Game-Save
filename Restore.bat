@@ -5,7 +5,11 @@
 @echo off
 setlocal EnableDelayedExpansion 
 
-set keyText="_WP"
+set "arkLocalSavedDir=C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\SavedArksLocal"
+set "keyText=_WP"
+
+echo Changing to ARK save dir: %arkLocalSavedDir%
+cd "%arkLocalSavedDir%"
 
 set val=0
 echo Searching for saved games: %saveText%
