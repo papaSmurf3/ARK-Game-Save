@@ -16,8 +16,11 @@ Steps to download and use these scripts:
 4. Click on "Downloads" in the left navigation pane.
 5. You should have an "ARK-Game-Save" entry zip file (which will also include the version number in the name)
 6. Select (single click) this zip file and choose the "Extract All" option on the top menu bar.
-7. Double click to go into the "ARK-Game-Save" folder twice.
-8. Double click the the "init.bat" file to run the initialization script amd follow the prompts.
+7. Click the "Extract" button to extract the files.
+8. Double click to go into the "ARK-Game-Save" folder twice.
+9. Double click the the "init.bat" file to run the initialization script amd follow the prompts.
+NOTE: Windows will likely present you with a blue popup window that says "Windows protected your PC". If this happens, click on the "More Info" link and then click the "Run anyway" button. This usually happens for any application that you download from GitHub.
+
 
 You should be set up to run the scripts.
 
@@ -28,6 +31,7 @@ For proper use of these scripts, do the following:
 4. Alt-Tab out of your game back to the File Explorer view of the ARK game saves folder.
 5. Double click the "Backup.bat" script to make a backup of the save that you just created in the game.
    Note: there should also be a shortcut to it on your Desktop as well.
+   NOTE: Windows will likely present you with a blue popup window that says "Windows protected your PC". If this happens, click on the "More Info" link and then click the "Run anyway" button. This usually happens for any application that you download from GitHub. It should only prompt you like this the first time you run it.
 6. Follow the prompts and make sure you pick the correct map (the last modified date and time should appear by each map option).
 7. When prompted, make sure to enter meaningful text to describe the save, for example:
     about to tame a rex
@@ -41,6 +45,7 @@ Now, suppose you play for a while and something goes wrong. Wouldn't it be nice 
 1. You must EXIT the game back to at least the game main menu. (you do not have to totally exit the game)
 2. Alt-Tab out of the game back to the File Explorer window that is opened to the Ark Game Saves directory and double click to run the "Restore.bat" script.
    Note: there should also be a shortcut to it on your Desktop.
+   NOTE: Windows will likely present you with a blue popup window that says "Windows protected your PC". If this happens, click on the "More Info" link and then click the "Run anyway" button. This usually happens for any application that you download from GitHub. It should only prompt you like this the first time you run it.
 3. Follow the prompts to pick the right map.
 4. When prompted, enter at least part of the text you entered when you made a backup.
    Note: Every backup made that contains at least the text you entered will be presented for restoring. For example, if you created a backup named "before rex tame" and later made a backup named "before giga tame", then entered just "before" as the text to look for, the script will present all saves containing the word "before" (one at a time).
