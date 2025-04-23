@@ -6,7 +6,8 @@ setlocal EnableDelayedExpansion
 
 set "arkLocalSavedDir=C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\SavedArksLocal"
 set "keyText=_WP"
-set "additionalDestFile=AdditionalDestinations.txt"
+set "arkGameSaveScriptsDir=C:\ArkGameSaveScripts"
+set "additionalDestFile=%arkGameSaveScriptsDir%\AdditionalDestinations.txt"
 
 echo Changing to ARK save dir: %arkLocalSavedDir%
 cd "%arkLocalSavedDir%"
