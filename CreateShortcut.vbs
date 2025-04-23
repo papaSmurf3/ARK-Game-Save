@@ -1,11 +1,11 @@
-dim oWS, objFSO, dtObj, desktopPathStr, pathOfSavedArksLocal, pathOfThisRelease, qa, sLinkNm, dLink
+dim oWS, objFSO, dtObj, desktopPathStr, pathOfSavedArksLocal, pathToScripts, qa, sLinkNm, dLink
 
 Set oWS = CreateObject("WScript.Shell") 
 set objFSO = CreateObject("Scripting.FileSystemObject") 
 dtObj = oWS.SpecialFolders("Desktop") 
 
 pathOfSavedArksLocal = "C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\SavedArksLocal" 
-pathOfThisRelease = pathOfSavedArksLocal & "\ARK-Game-Save-1.0" 
+pathToScripts = "C:\ArkGameSaveScripts" 
 
 desktopPathStr = objFSO.GetAbsolutePathName(dtObj) 
 ' WScript.Echo "Found Desktop folder as " + desktopPathStr 
@@ -23,7 +23,7 @@ dLink.IconLocation = "C:\WINDOWS\System32\SHELL32.dll,4"
 dLink.Save 
 
 WScript.Echo "Create shortcuts to the Backup and Restore scripts in the ARK save folder"
-Call CreateLinks (oWS, "..")
+Call CreateLinks (oWS, pathOfSavedArksLocal)
 WScript.Echo "Create shortcuts to the Backup and Restore scripts on the Desktop"
 Call CreateLinks (oWS, desktopPathStr)
 
@@ -35,8 +35,8 @@ End Function
 Function CreateLink (shellObj, keyScript, pathForLink, iconFile) 
     sLinkFile = pathForLink & "\" & keyScript & ".lnk" 
     Set oLink = oWS.CreateShortcut(sLinkFile) 
-    oLink.TargetPath = pathOfThisRelease & "\" & keyScript
+    oLink.TargetPath = pathToScripts & "\" & keyScript
     oLink.Description = "ASA custom " + keyScript + " script" 
-    oLink.IconLocation = pathOfThisRelease & "\" & iconFile
+    oLink.IconLocation = pathToScripts & "\" & iconFile
     oLink.Save 
 End Function 
