@@ -19,7 +19,7 @@ Steps to download and use these scripts:
 7. Click the "Extract" button to extract the files.
 8. Double click to go into the "ARK-Game-Save" folder twice.
 9. Double click the the "init.bat" file to run the initialization script amd follow the prompts.
-*NOTE: Windows will likely present you with a blue popup window that says "Windows protected your PC". If this happens, click on the "More Info" link and then click the "Run anyway" button. This usually happens for any application that you download from GitHub.
+* NOTE: Windows will likely present you with a blue popup window that says "Windows protected your PC". If this happens, click on the "More Info" link and then click the "Run anyway" button. This usually happens for any application that you download from GitHub.
 
 
 You should be set up to run the scripts.
@@ -37,18 +37,18 @@ For proper use of these scripts, do the following:
     * about to tame a rex
     * heading into south cave
     * done with build project
-  *NOTE: the current date and time of when you run the script is prepended to the name.
-  *NOTE: You cannot use any symbols that are not valid for windows file names (like question mark or asterisk)
+  * NOTE: the current date and time of when you run the script is prepended to the name.
+  * NOTE: You cannot use any symbols that are not valid for windows file names (like question mark or asterisk)
 8. Return to your ARK game and keep playing.
 
 Now, suppose you play for a while and something goes wrong. Wouldn't it be nice to "go back in time" to your previous save (that you ran the backup for)?  You can!  
 1. You must EXIT the game back to at least the game main menu. (you do not have to totally exit the game)
 2. Alt-Tab out of the game back to the File Explorer window that is opened to the Ark Game Saves directory and double click to run the "Restore.bat" script.
-   *Note: there should also be a shortcut to it on your Desktop.
-   *NOTE: Windows will likely present you with a blue popup window that says "Windows protected your PC". If this happens, click on the "More Info" link and then click the "Run anyway" button. This usually happens for any application that you download from GitHub. It should only prompt you like this the first time you run it.
+   * Note: there should also be a shortcut to it on your Desktop.
+   * NOTE: Windows will likely present you with a blue popup window that says "Windows protected your PC". If this happens, click on the "More Info" link and then click the "Run anyway" button. This usually happens for any application that you download from GitHub. It should only prompt you like this the first time you run it.
 3. Follow the prompts to pick the right map.
 4. When prompted, enter at least part of the text you entered when you made a backup.
-   *Note: Every backup made that contains at least the text you entered will be presented for restoring. For example, if you created a backup named "before rex tame" and later made a backup named "before giga tame", then entered just "before" as the text to look for, the script will present all saves containing the word "before" (one at a time).
+   * Note: Every backup made that contains at least the text you entered will be presented for restoring. For example, if you created a backup named "before rex tame" and later made a backup named "before giga tame", then entered just "before" as the text to look for, the script will present all saves containing the word "before" (one at a time).
 
 This script also supports copying the backup to additional folders. For example, if you have your Google drive mapped on your computer, you can have the Backups copied to it as well. Steps to do this:
 1. Using Windows File Explorer, go into the ARK Game Saves folder (you can use the Desktop shortcut to go right to it).
@@ -61,8 +61,8 @@ G:\My Drive\Ark Game Saves
 
 
 Final note: There is no automated cleanup process. So you will likely want to go into the ARK Game Saves folder and delete old backups that you no longer need.  All of these backup saves have a name format like:
-*<Map Name> - SAVE_<Date>_<Time> - <entered description>
-*Date is in YYYYMMDD format. Time is in HHMMSS format.
+* <Map Name> - SAVE_<Date>_<Time> - <entered description>
+* Date is in YYYYMMDD (YearMonthDate) format. Time is in HHMMSS (HourMinuteSecond) format.
 
 Example:
-TheIsland_WP - SAVE_20250327_222030 - hunt megaladon
+* TheIsland_WP - SAVE_20250327_222030 - hunt megaladon
