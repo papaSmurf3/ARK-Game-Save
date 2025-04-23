@@ -30,8 +30,8 @@ For proper use of these scripts, do the following:
 3. You may want to pause the game by hitting ESC to bring up the menu, again. (optional)
 4. Alt-Tab out of your game back to the File Explorer view of the ARK game saves folder.
 5. Double click the "Backup.bat" script to make a backup of the save that you just created in the game.
-   *Note: there should also be a shortcut to it on your Desktop as well.
-   *NOTE: Windows will likely present you with a blue popup window that says "Windows protected your PC". If this happens, click on the "More Info" link and then click the "Run anyway" button. This usually happens for any application that you download from GitHub. It should only prompt you like this the first time you run it.
+   * Note: there should also be a shortcut to it on your Desktop as well.
+   * NOTE: Windows will likely present you with a blue popup window that says "Windows protected your PC". If this happens, click on the "More Info" link and then click the "Run anyway" button. This usually happens for any application that you download from GitHub. It should only prompt you like this the first time you run it.
 6. Follow the prompts and make sure you pick the correct map (the last modified date and time should appear by each map option).
 7. When prompted, make sure to enter meaningful text to describe the save, for example:
     * about to tame a rex
