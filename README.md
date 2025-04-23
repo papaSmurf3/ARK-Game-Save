@@ -64,8 +64,10 @@ For example, my Google drive is mapped to my G drive. On my Google drive, I crea
 
 
 Final note: There is no automated cleanup process. So you will likely want to go into the ARK Game Saves folder and delete old backups that you no longer need.  All of these backup saves have a name format like:
-* <Map Name> - SAVE_<Date>_<Time> - <entered description>
-* Date is in YYYYMMDD (YearMonthDate) format. Time is in HHMMSS (HourMinuteSecond) format.
+* Map Name - SAVE_Date_Time - entered description
+  * Map Name is the name of the map like TheIsland_WP
+  * Date is in YYYYMMDD (YearMonthDate) format.
+  * Time is in HHMMSS (HourMinuteSecond) format.
 
 Example:
 * TheIsland_WP - SAVE_20250327_222030 - hunt megaladon
