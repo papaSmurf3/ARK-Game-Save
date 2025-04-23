@@ -34,9 +34,9 @@ For proper use of these scripts, do the following:
    NOTE: Windows will likely present you with a blue popup window that says "Windows protected your PC". If this happens, click on the "More Info" link and then click the "Run anyway" button. This usually happens for any application that you download from GitHub. It should only prompt you like this the first time you run it.
 6. Follow the prompts and make sure you pick the correct map (the last modified date and time should appear by each map option).
 7. When prompted, make sure to enter meaningful text to describe the save, for example:
-    about to tame a rex
-    heading into south cave
-    done with build project
+    * about to tame a rex
+    * heading into south cave
+    * done with build project
   NOTE: the current date and time of when you run the script is prepended to the name.
   NOTE: You cannot use any symbols that are not valid for windows file names (like question mark or asterisk)
 8. Return to your ARK game and keep playing.
