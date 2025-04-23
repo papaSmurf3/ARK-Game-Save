@@ -22,7 +22,10 @@ Steps to download and use these scripts:
 * NOTE: Windows will likely present you with a blue popup window that says "Windows protected your PC". If this happens, click on the "More Info" link and then click the "Run anyway" button. This usually happens for any application that you download from GitHub.
 
 
-You should be set up to run the scripts.
+You should be set up to run the Backup and Restore scripts from three different locations:
+* The destination folder on your PC for the scripts: C:\ArkGameSaveScripts
+* Shortcuts on your Desktop
+* Shortcuts created in your ARK local saves directory
 
 For proper use of these scripts, do the following:
 1. I find it easiest to already have the ARK save game folder open by double clicking the "ARK Game Saves" link to it on your desktop. (this will be created AFTER you run the initiallization script)
@@ -30,7 +33,7 @@ For proper use of these scripts, do the following:
 3. You may want to pause the game by hitting ESC to bring up the menu, again. (optional)
 4. Alt-Tab out of your game back to the File Explorer view of the ARK game saves folder.
 5. Double click the "Backup.bat" script to make a backup of the save that you just created in the game.
-   * Note: there should also be a shortcut to it on your Desktop as well.
+   * Note: there should also be a shortcut to it on your Desktop as well or just run it from the C:\ArkGameSaveScripts directory.
    * NOTE: Windows will likely present you with a blue popup window that says "Windows protected your PC". If this happens, click on the "More Info" link and then click the "Run anyway" button. This usually happens for any application that you download from GitHub. It should only prompt you like this the first time you run it.
 6. Follow the prompts and make sure you pick the correct map (the last modified date and time should appear by each map option).
 7. When prompted, make sure to enter meaningful text to describe the save, for example:
@@ -44,19 +47,19 @@ For proper use of these scripts, do the following:
 Now, suppose you play for a while and something goes wrong. Wouldn't it be nice to "go back in time" to your previous save (that you ran the backup for)?  You can!  
 1. You must EXIT the game back to at least the game main menu. (you do not have to totally exit the game)
 2. Alt-Tab out of the game back to the File Explorer window that is opened to the Ark Game Saves directory and double click to run the "Restore.bat" script.
-   * Note: there should also be a shortcut to it on your Desktop.
+   * Note: there should also be a shortcut to it on your Desktop or just run it from the C:\ArkGameSaveScripts directory.
    * NOTE: Windows will likely present you with a blue popup window that says "Windows protected your PC". If this happens, click on the "More Info" link and then click the "Run anyway" button. This usually happens for any application that you download from GitHub. It should only prompt you like this the first time you run it.
 3. Follow the prompts to pick the right map.
 4. When prompted, enter at least part of the text you entered when you made a backup.
    * Note: Every backup made that contains at least the text you entered will be presented for restoring. For example, if you created a backup named "before rex tame" and later made a backup named "before giga tame", then entered just "before" as the text to look for, the script will present all saves containing the word "before" (one at a time).
 
 This script also supports copying the backup to additional folders. For example, if you have your Google drive mapped on your computer, you can have the Backups copied to it as well. Steps to do this:
-1. Using Windows File Explorer, go into the ARK Game Saves folder (you can use the Desktop shortcut to go right to it).
+1. Using Windows File Explorer, go into the folder where these scripts are saved: C:\ArkGameSaveScripts 
 2. Click on the "New" option and select to create a text document.
 3. Rename this newly created file to "AdditionalDestinations.txt"
 4. Open up this file in Notepad and add the folder path where you want to also copy the backup save.
 For example, my Google drive is mapped to my G drive. On my Google drive, I created a folder named "Ark Game Saves". So I added this entry into this new file:
-G:\My Drive\Ark Game Saves
+* G:\My Drive\Ark Game Saves
 5. The next time you run the backup script, it should also copy the backup save to this directory.
 
 
